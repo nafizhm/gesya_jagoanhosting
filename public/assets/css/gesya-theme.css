@@ -1,0 +1,112 @@
+/* Tema aplikasi berdasarkan warna logo Gesya. */
+:root {
+    --gesya-gelap: #0d1e5c;
+    --gesya-utama: #19377e;
+    --gesya-aksen: #6f89c0;
+    --primary: #19377e;
+}
+
+.gesya-navbar {
+    background: linear-gradient(110deg, var(--gesya-gelap), var(--gesya-utama));
+    border-bottom: 3px solid var(--gesya-aksen);
+}
+
+.main-sidebar, .sidebar-fixed-bottom {
+    background-color: var(--gesya-gelap);
+}
+
+.main-sidebar .brand-link {
+    background: #fff;
+    border-bottom: 3px solid var(--gesya-aksen);
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-dark-primary .nav-treeview > .nav-item > .nav-link.active,
+.sidebar-dark-primary .nav-treeview > .nav-item > .nav-link.active:hover {
+    background-color: var(--gesya-utama);
+    color: #fff;
+    box-shadow: inset 3px 0 var(--gesya-aksen);
+}
+
+.sidebar-dark-primary .nav-sidebar .nav-link,
+.sidebar-fixed-bottom .nav-link {
+    color: #e1e8f6;
+}
+
+.sidebar-dark-primary .nav-sidebar .nav-link:hover,
+.sidebar-dark-primary .nav-sidebar > .menu-open > .nav-link,
+.sidebar-fixed-bottom .nav-link:hover {
+    background-color: var(--gesya-utama);
+    color: #fff;
+}
+
+body:not(.dark-mode) .content-wrapper {
+    background-color: #f3f5fa;
+}
+
+.btn-primary, .bg-primary, .bg-indigo,
+.card-primary:not(.card-outline) > .card-header,
+.page-item.active .page-link, .nav-pills .nav-link.active,
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--gesya-utama) !important;
+    border-color: var(--gesya-utama) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: var(--gesya-gelap) !important;
+    border-color: var(--gesya-gelap) !important;
+}
+
+.btn-outline-primary, .text-primary, .text-indigo {
+    color: var(--gesya-utama) !important;
+}
+
+.btn-outline-primary, .card-primary.card-outline {
+    border-color: var(--gesya-utama);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:not(:disabled):not(.disabled):active {
+    background-color: var(--gesya-utama);
+    border-color: var(--gesya-utama);
+    color: #fff !important;
+}
+
+.form-control:focus, .custom-select:focus,
+.select2-container--bootstrap4.select2-container--focus .select2-selection,
+.btn-primary:focus, .btn-outline-primary:focus {
+    border-color: #6f89c0;
+    box-shadow: 0 0 0 .2rem rgba(36, 71, 149, .25);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--gesya-utama);
+    border-color: var(--gesya-utama);
+}
+
+body.dark-mode .text-primary, body.dark-mode .text-indigo,
+body.dark-mode .btn-outline-primary {
+    color: #a8bdea !important;
+}
+
+body.dark-mode .page-item.active .page-link {
+    background-color: var(--gesya-utama) !important;
+    border-color: #6f89c0 !important;
+    color: #fff !important;
+}
+
+.main-sidebar .gesya-logo-sidebar {
+    min-height: 66px;
+    padding: 14px 12px;
+    overflow: hidden;
+}
+
+.gesya-logo-sidebar img {
+    display: block;
+    width: 100%;
+    max-width: 226px;
+    height: auto;
+    object-fit: contain;
+}

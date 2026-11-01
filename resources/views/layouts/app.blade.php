@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('templates/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 
   @stack('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/gesya-theme.css') }}?v=1">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">

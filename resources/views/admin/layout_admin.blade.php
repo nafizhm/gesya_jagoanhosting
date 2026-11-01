@@ -61,6 +61,7 @@
             overflow-y: auto;
         }
     </style>
+    <link rel="stylesheet" href="{{ asset('assets/css/gesya-theme.css') }}?v=2">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -76,7 +77,7 @@
 
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-light" style="background-color: #28a745">
+        <nav class="main-header navbar navbar-expand navbar-dark gesya-navbar">
             <ul class="navbar-nav d-flex align-items-center" style="margin-left: 5px;">
                 <li class="nav-item">
                     <a class="nav-link text-white" data-widget="pushmenu" href="#" role="button">
@@ -109,41 +110,14 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            @php
-                $logo = \App\Models\PengaturanMedia::where('jenis_data', 'logo website')->first();
-            @endphp
-
-            <a href="#"
-                class="brand-link d-flex flex-column align-items-center justify-content-center text-center py-2"
-                style="text-decoration: none;">
-                <img src="{{ asset('config_media/' . ($logo->nama_file ?? 'default.png')) }}" alt="Logo Website"
-                    class="brand-image">
-                @php
-                    $konfigurasi = \App\Models\PengaturanProfil::first();
-                @endphp
-
-                {{-- <span class="brand-text font-weight-light d-block">
-                    <strong>{{ $konfigurasi->nama_perusahaan ?? 'Template Aplikasi' }}</strong>
-                </span> --}}
+            <a href="{{ route('dashboard') }}"
+                class="brand-link d-flex align-items-center justify-content-center gesya-logo-sidebar"
+                aria-label="Beranda Gesya Group">
+                <img src="{{ asset('assets/img/logo-sidebar-gesya.jpg') }}" alt="Gesya Group">
             </a>
-
 
             <!-- Sidebar -->
             <div class="sidebar">
-
-                <!-- Sidebar Search -->
-                <div class="form-inline px-3 pb-2 mt-2">
-                    <div class="input-group" data-widget="sidebar-search">
-                        <input class="form-control form-control-sidebar" type="search" placeholder="Cari menu..."
-                            aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-sidebar">
-                                <i class="fas fa-search fa-fw"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
